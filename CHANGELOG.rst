@@ -2,8 +2,14 @@
 Changelog
 ^^^^^^^^^
 
+0.1.17-23 [2013-09-26]
+======================
+
+* catkin_create_rosjava_xxx scripts added.
+
+
 0.1.17-22 [2013-09-23]
-===================
+======================
 
 * Use GRADLE_USER_HOME only when creating binaries.
 * Use maven-publish for publishing rosjava packages
