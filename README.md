@@ -1,3 +1,22 @@
+## rosjava_build_tools - 0.1.29-2
+
+User `snorri@snorriwork64` released the packages in the `rosjava_build_tools` repository by running `/usr/bin/bloom-release --track hydro --rosdistro hydro rosjava_build_tools` on `Fri, 08 Nov 2013 11:31:09 -0000`
+
+The `rosjava_build_tools` package was released.
+
+Version of package(s) in repository `rosjava_build_tools`:
+- rosdistro version: `0.1.28-0`
+- old version: `0.1.29-1`
+- new version: `0.1.29-2`
+
+Versions of tools used:
+- bloom version: `0.4.4`
+- catkin_pkg version: `0.1.19`
+- rosdep version: `0.10.21`
+- rosdistro version: `0.2.14`
+- vcstools version: `0.1.31`
+
+
 ## rosjava_build_tools - 0.1.29-1
 
 User `snorri@snorriwork64` released the packages in the `rosjava_build_tools` repository by running `/usr/bin/bloom-release --track hydro --rosdistro hydro rosjava_build_tools` on `Fri, 08 Nov 2013 11:27:46 -0000`
