@@ -44,6 +44,7 @@ endmacro()
 # Note that we check for the variable existence as well so we don't
 # override a user setting.
 macro(_rosjava_env)
+    set(ROS_GRADLE_VERBOSE $ENV{ROS_GRADLE_VERBOSE})
     set(ROS_MAVEN_DEPLOYMENT_REPOSITORY $ENV{ROS_MAVEN_DEPLOYMENT_REPOSITORY})
     set(ROS_MAVEN_REPOSITORY $ENV{ROS_MAVEN_REPOSITORY})
     if(NOT ROS_MAVEN_DEPLOYMENT_REPOSITORY)
@@ -75,18 +76,33 @@ macro(catkin_rosjava_setup)
     else()
       set(gradle_tasks ${ARGV})
     endif()
-    add_custom_target(gradle-${PROJECT_NAME}
-        ALL
-        COMMAND ${ROSJAVA_ENV} ${CATKIN_ENV} "env" "|" "grep" "ROS" 
-        COMMAND ${ROSJAVA_ENV} ${CATKIN_ENV} ${${PROJECT_NAME}_gradle_BINARY} ${gradle_tasks} 
+    if(ROS_GRADLE_VERBOSE)
+       set(gradle_options "")
+    else()
+       set(gradle_options "-q")
+    endif()
+    ###################################
+    # Execution
+    ###################################
+    add_custom_target(gradle-${PROJECT_NAME} ALL
+        #COMMAND ${ROSJAVA_ENV} ${CATKIN_ENV} "env" "|" "grep" "ROS" 
+        COMMAND ${ROSJAVA_ENV} ${CATKIN_ENV} ${${PROJECT_NAME}_gradle_BINARY} ${gradle_options} ${gradle_tasks}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         VERBATIM
+        COMMENT "Gradling tasks for ${PROJECT_NAME}"
     )
+    ###################################
+    # Target Management
+    ###################################
     catkin_package_xml()
-    foreach(depends in ${${PROJECT_NAME}_BUILD_DEPENDS})
+    foreach(depends ${${PROJECT_NAME}_BUILD_DEPENDS})
         if(TARGET gradle-${depends})
-            #message(STATUS "Adding dependency gradle-${depends}")
+            #message(STATUS "Adding dependency.....gradle-${PROJECT_NAME} <- gradle-${depends}")
             add_dependencies(gradle-${PROJECT_NAME} gradle-${depends})
+        endif()
+        if(TARGET ${depends}_generate_messages)
+            #message(STATUS "Adding dependency.....gradle-${PROJECT_NAME} <- ${depends}_generate_messages")
+            add_dependencies(gradle-${PROJECT_NAME} ${depends}_generate_messages)
         endif()
     endforeach()
     if(NOT TARGET gradle-clean)
@@ -95,6 +111,7 @@ macro(catkin_rosjava_setup)
     add_custom_target(gradle-clean-${PROJECT_NAME}
         COMMAND ${CATKIN_ENV} ${${PROJECT_NAME}_gradle_BINARY} clean
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Cleaning gradle project for ${PROJECT_NAME}"
     )
     add_dependencies(gradle-clean gradle-clean-${PROJECT_NAME})
 endmacro()
@@ -109,11 +126,7 @@ macro(catkin_android_setup)
     _rosjava_env()
     find_gradle()
     if( ${ARGC} EQUAL 0 )
-      if(CMAKE_BUILD_TYPE STREQUAL "Release")
-        set(gradle_tasks "assembleRelase")
-      else()
-        set(gradle_tasks "assembleDebug")
-      endif()
+      return() # Nothing to do (typically no subprojects created yet)
     else()
       set(gradle_tasks ${ARGV})
     endif()
