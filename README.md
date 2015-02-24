@@ -1,3 +1,24 @@
+## rosjava_build_tools (indigo) - 0.2.1-0
+
+The packages in the `rosjava_build_tools` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo rosjava_build_tools --edit` on `Tue, 24 Feb 2015 16:58:04 -0000`
+
+The `rosjava_build_tools` package was released.
+
+Version of package(s) in repository `rosjava_build_tools`:
+- upstream repository: https://github.com/rosjava/rosjava_build_tools.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.2.1-0`
+
+Versions of tools used:
+- bloom version: `0.5.18`
+- catkin_pkg version: `0.2.3`
+- rosdep version: `0.10.28`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.35`
+
+
 ## rosjava_build_tools (hydro) - 0.1.34-0
 
 The packages in the `rosjava_build_tools` repository were released into the `hydro` distro by running `/usr/bin/bloom-release --track hydro --rosdistro hydro rosjava_build_tools` on `Thu, 12 Jun 2014 00:08:42 -0000`
