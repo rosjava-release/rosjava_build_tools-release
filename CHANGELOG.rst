@@ -2,23 +2,9 @@
 Changelog
 ^^^^^^^^^
 
-0.2.3 (2015-03-01)
-------------------
-* publically expose the rosjava environment setup (for genjava).
-* Contributors: Daniel Stonier
-
-0.2.2 (2015-02-25)
-------------------
-* support for finding broken message packages.
-* Contributors: Daniel Stonier
-
-0.2.1 (2015-02-25)
-------------------
-* upgrade catkin create scripts for indigo
-* support modules for genjava
-* deprecated create msg package scripts
-* minor bugfixes and improvements.
-* Contributors: Benjamin Chrétien, Daniel Stonier, Martin Pecka
+0.1.35 (2015-06-03)
+===================
+* bugfix for environment hooks when workspaces have spaces
 
 0.1.34 (2014-06-12)
 ===================
