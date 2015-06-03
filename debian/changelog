@@ -1,0 +1,31 @@
+ros-indigo-rosjava-build-tools (0.2.4-0saucy) saucy; urgency=high
+
+  * bugfix environment hooks for workspaces with spaces.
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Tue, 02 Jun 2015 15:00:00 -0000
+
+ros-indigo-rosjava-build-tools (0.2.3-0saucy) saucy; urgency=high
+
+  * publically expose the rosjava environment setup (for genjava).
+  * Contributors: Daniel Stonier
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Sat, 28 Feb 2015 15:00:00 -0000
+
+ros-indigo-rosjava-build-tools (0.2.2-0saucy) saucy; urgency=high
+
+  * support for finding broken message packages.
+  * Contributors: Daniel Stonier
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Tue, 24 Feb 2015 15:00:00 -0000
+
+ros-indigo-rosjava-build-tools (0.2.1-0saucy) saucy; urgency=high
+
+  * upgrade catkin create scripts for indigo
+  * support modules for genjava
+  * deprecated create msg package scripts
+  * minor bugfixes and improvements.
+  * Contributors: Benjamin Chrétien, Daniel Stonier, Martin Pecka
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Tue, 24 Feb 2015 15:00:00 -0000
+
+
