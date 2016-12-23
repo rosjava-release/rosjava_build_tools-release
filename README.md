@@ -1,3 +1,26 @@
+## rosjava_build_tools (kinetic) - 0.3.0-0
+
+The packages in the `rosjava_build_tools` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release rosjava_build_tools --track kinetic --rosdistro kinetic --new-track` on `Fri, 23 Dec 2016 17:27:04 -0000`
+
+The `rosjava_build_tools` package was released.
+
+Version of package(s) in repository `rosjava_build_tools`:
+
+- upstream repository: https://github.com/rosjava/rosjava_build_tools.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.3.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.23`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.39`
+
+
 ## rosjava_build_tools (indigo) - 0.2.4-0
 
 The packages in the `rosjava_build_tools` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --track indigo --rosdistro indigo rosjava_build_tools` on `Wed, 03 Jun 2015 02:03:23 -0000`
