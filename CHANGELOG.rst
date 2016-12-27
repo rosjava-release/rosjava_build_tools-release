@@ -2,6 +2,10 @@
 Changelog
 ^^^^^^^^^
 
+0.3.1 (2016-12-27)
+------------------
+* Gradle 2.2.1 -> 2.14.1
+
 0.3.0 (2016-12-14)
 ------------------
 * Updates for Kinetic release.
@@ -27,6 +31,12 @@ Changelog
 * deprecated create msg package scripts
 * minor bugfixes and improvements.
 * Contributors: Benjamin Chrétien, Daniel Stonier, Martin Pecka
+
+0.2.0 [2013-10-25]
+==================
+* official maven style open range dependencies in templates
+* gradle 1.7->1.8
+* android build tools 18.1.1
 
 0.1.34 (2014-06-12)
 ===================
