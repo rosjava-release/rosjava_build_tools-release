@@ -1,0 +1,12 @@
+Source: ros-kinetic-rosjava-build-tools
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <d.stonier@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ant, default-jdk, ros-kinetic-catkin
+Homepage: http://ros.org/wiki/rosjava_build_tools
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rosjava-build-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ant, default-jdk, ros-kinetic-catkin
+Description: Simple tools and catkin modules for rosjava development.
