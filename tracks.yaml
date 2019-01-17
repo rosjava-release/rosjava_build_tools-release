@@ -60,7 +60,7 @@ tracks:
     last_version: 0.3.3
     name: rosjava_build_tools
     patches: null
-    release_inc: '0'
+    release_inc: '1'
     release_repo_url: git@github.com:rosjava-release/rosjava_build_tools-release
     release_tag: :{version}
     ros_distro: kinetic
